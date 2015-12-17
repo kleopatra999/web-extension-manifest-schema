@@ -22,7 +22,7 @@
                             "strict_max_version": {
                                 "default": "*",
                                 "description": "Maxiumum version of Gecko to support. Defaults to '*'. (Requires Gecko 45)",
-                                "type": "string",
+                                "type": "string"
                             },
                             "update_url": {
                                 "description": "Link to an add-on update manifest. (Requires Gecko 45)",
@@ -30,7 +30,7 @@
                                 "format": "uri"
                             },
                             "required": [
-                                "id",
+                                "id"
                             ]
                         }
                     }
@@ -40,7 +40,7 @@
         "name": {
             "description": "Name of the extension. This is used to identify the extension in the browser's user interface and on sites  like addons.mozilla.org.",
             "type": "string",
-            "minLength": 4,
+            "minLength": 2,
             "maxLength": 255
         },
         "manifest_version": {
@@ -56,7 +56,7 @@
         }
     },
     "required": [
-        "application",
+        "applications",
         "name",
         "manifest_version",
         "version"
