@@ -3,6 +3,7 @@ module.exports = {
     // Timeout is long due to tests that check *all* rules have been run.
     timeout: 5000,
     require: [
+      'babel-polyfill',
       function() {
         /*eslint-disable */
         // Monkey-patch mocha colors.
@@ -20,5 +21,5 @@ module.exports = {
     ],
     reporter: 'spec',
   },
-  src: ['tests/**/test.*.js']
+  src: ['build/test.*.js'],
 };

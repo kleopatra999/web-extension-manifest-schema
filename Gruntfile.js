@@ -10,7 +10,9 @@ module.exports = function(grunt) {
   });
 
   grunt.initConfig(configs);
+  grunt.loadNpmTasks('grunt-newer');
 
-  grunt.registerTask('test', ['mochaTest']);
+  grunt.registerTask('test', ['newer:babel', 'mochaTest']);
+  grunt.registerTask('test-ci', ['clean', 'babel', 'mochaTest']);
 
 };
