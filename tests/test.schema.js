@@ -1,11 +1,9 @@
-var fs = require('fs');
-
-var schema = fs.readFileSync('./manifest-schema.json', 'utf8');
+import { schema } from './helpers';
 
 
-describe('Schema', function() {
+describe('Schema', () => {
 
-  it('should be valid JSON', function() {
+  it('should be valid JSON', () => {
     try {
       JSON.parse(schema);
     } catch (e) {
