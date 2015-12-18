@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
   // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
   require('load-grunt-tasks')(grunt);
 
@@ -10,9 +9,7 @@ module.exports = function(grunt) {
   });
 
   grunt.initConfig(configs);
-  grunt.loadNpmTasks('grunt-newer');
 
   grunt.registerTask('test', ['newer:babel', 'mochaTest']);
   grunt.registerTask('test-ci', ['clean', 'babel', 'mochaTest']);
-
 };

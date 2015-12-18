@@ -1,5 +1,3 @@
 module.exports = {
-  build: {
-    src: ['build/'],
-  },
+  src: ['build'],
 };
