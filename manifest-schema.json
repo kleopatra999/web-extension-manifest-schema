@@ -28,11 +28,11 @@
                                 "description": "Link to an add-on update manifest. (Requires Gecko 45)",
                                 "type": "string",
                                 "format": "uri"
-                            },
-                            "required": [
-                                "id"
-                            ]
-                        }
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
                     }
                 }
 
