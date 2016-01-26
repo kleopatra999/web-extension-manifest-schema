@@ -1,5 +1,4 @@
-import { schema } from './helpers';
-
+import { schema } from '../validator';
 
 describe('Schema', () => {
 

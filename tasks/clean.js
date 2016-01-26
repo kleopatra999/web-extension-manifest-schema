@@ -1,3 +1,3 @@
 module.exports = {
-  src: ['build'],
+  src: ['dist'],
 };

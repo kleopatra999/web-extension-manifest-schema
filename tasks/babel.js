@@ -1,14 +1,19 @@
 module.exports = {
   options: {
-    sourceMap: true,
+    sourceMap: 'inline',
     presets: ['es2015'],
   },
-  build: {
+  dist: {
     files: [{
       expand: true,
       cwd: 'tests/',
       src: ['*.js'],
-      dest: 'build/',
+      dest: 'dist/tests',
+    },{
+      expand: true,
+      cwd: 'src/',
+      src: ['*.js'],
+      dest: 'dist/',
     }],
   },
 };

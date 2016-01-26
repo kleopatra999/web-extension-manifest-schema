@@ -1,8 +1,6 @@
-import jsen from 'jsen';
+import validate from '../validator';
+import { validManifest } from './helpers';
 
-import { schema, validManifest } from './helpers';
-
-var validate = jsen(JSON.parse(schema));
 
 describe('Schema', () => {
 
