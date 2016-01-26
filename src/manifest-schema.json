@@ -45,8 +45,7 @@
         },
         "manifest_version": {
             "description": "This key specifies the version of manifest.json used by this extension. Currently, this must always be 2.",
-            "maximum": 2,
-            "minimum": 2,
+            "enum": [2],
             "type": "integer"
         },
         "version": {
@@ -63,8 +62,7 @@
     ],
     "definitions": {
         "version": {
-            "description": "One to four dot-separated integers identifying the version of this extension. (Currently based on chrome's format - note the pattern does not validate the max integer size of 65535 nor that leading zeros are forbidden.)",
-            "pattern": "^\\d{1,5}(?:\\.\\d{1,5}){0,3}$",
+            "format": "versionString",
             "type": "string"
         }
     }
