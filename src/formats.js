@@ -2,15 +2,15 @@ const VALIDNUMRX = /^[0-9]{1,5}$/;
 
 
 export function isValidVersionString(version) {
+  // We should be starting with a string.
+  if (typeof version !== 'string') {
+    return false;
+  }
   var parts = version.split('.');
   if (parts.length > 4) {
     return false;
   }
   for (var part of parts) {
-    // Must start as a string.
-    if (typeof part !== 'string') {
-      return false;
-    }
     // Leading or multiple zeros not allowed.
     if (part.startsWith('0') && part.length > 1) {
       return false;

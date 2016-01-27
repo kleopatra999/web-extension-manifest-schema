@@ -8,4 +8,5 @@ export var schema = fs.readFileSync(
 
 var validator = ajv({allErrors: true});
 validator.addFormat('versionString', isValidVersionString);
+
 export default validator.compile(JSON.parse(schema));
