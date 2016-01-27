@@ -21,5 +21,5 @@ module.exports = {
     ],
     reporter: 'spec',
   },
-  src: ['build/test.*.js'],
+  src: ['dist/tests/test.*.js'],
 };
