@@ -10,6 +10,8 @@ module.exports = function(grunt) {
 
   grunt.initConfig(configs);
 
-  grunt.registerTask('test', ['newer:babel', 'newer:copy', 'mochaTest']);
-  grunt.registerTask('test-ci', ['clean', 'babel', 'copy', 'mochaTest']);
+  grunt.registerTask('test', [
+    'newer:babel', 'newer:copy', 'mochaTest', 'eslint']);
+  grunt.registerTask('test-ci', [
+    'clean', 'babel', 'copy', 'mochaTest', 'eslint']);
 };
