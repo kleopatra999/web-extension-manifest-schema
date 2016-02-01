@@ -6,8 +6,10 @@ script: npm test
 deploy:
   provider: npm
   email: addons-dev-automation+npm@mozilla.com
+  skip_cleanup: true
   api_key:
     secure: eKp9F39PHLSQPMlb1gO8BjSZ6cqRRO/gxIk65V8J3ll5BfB6o33V3XfLqx5RHHLNut087lAJ1S/UhCFpboyM/ayBPjx9uzoRN0BHH4clJX6/VPZRJvxs1Usx3wAUA5k1ucCxtTAmURUuDtKx6a0u9nOXH24zeI9iJMQwEGm9g2gKHbaUE0Yp58MybxeYU3zI7Qe32AR8cYMSh/cYwD7aSxs8g72UBV/oH+ZoTsTRIzptATDVBLQvHSIGLCzyx6RyrJzra1DsHimxQnMLSWww5VbSDtWKfVQ/B6IY/mNVk9E0YNUMm8P/2QL6SxXaxTZvwEh0uw3JDlOQKQ6hJStn38xOflQWK1LrQMvcpZQHw8NAQVjl8d+PCZBeeQKW1b04RqYamuq+tV18A/Pzezz2yGqKRvshCuBYNqcn8WZ2w7zoivbrwrRKz0azV6ZPU4qktaA7+VK4UJdwUuk6Qz45COmm8WluL9M40HVRNa35ZL0ESfUj6Ks7L1HNZRDbObVTWBVh4SkD4KN2wLsC1b3Al+MN2AaFOVlazsR8+RnkIlQryI9gHkrm/bg3gyvxRkQ8QhkqkLqDOJlLXflfISnFv6luGMeRy2za3qtzIhCnrIXjjIIlgUcCQUWWAcs+B6LA7WXK81hCHH9b5sHeUx/cUYIipKA1GRCiq9Oc0YYRHjg=
   on:
     tags: true
     repo: mozilla/web-extension-manifest-schema
+    branch: master
