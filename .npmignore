@@ -1,0 +1,17 @@
+.babelrc
+.eslintignore
+.eslintrc
+.gitignore
+.grunt
+.jscsrc
+.npmignore
+.npmrc
+.travis.yml
+Gruntfile.js
+dist/tests
+docs/
+karma.conf.js
+node_modules/
+src/
+tasks/
+tests/
