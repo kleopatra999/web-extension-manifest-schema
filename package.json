@@ -26,9 +26,12 @@
   "bugs": {
     "url": "https://github.com/mozilla/web-extension-manifest-schema/issues"
   },
+  "main": "dist/validator",
   "homepage": "https://github.com/mozilla/web-extension-manifest-schema#readme",
+  "dependencies": {
+    "ajv": "3.5.1"
+  },
   "devDependencies": {
-    "ajv": "3.5.1",
     "babel-core": "6.4.5",
     "babel-eslint": "5.0.0-beta6",
     "babel-polyfill": "6.3.14",
