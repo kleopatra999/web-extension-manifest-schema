@@ -2,7 +2,7 @@
   "name": "mozilla-web-extension-manifest-schema",
   "version": "0.0.2",
   "description": "JSON schema for the manifest.json for Mozilla Web Extensions. ",
-  "main": "index.js",
+  "main": "dist/validator",
   "directories": {
     "test": "tests"
   },
@@ -26,10 +26,9 @@
   "bugs": {
     "url": "https://github.com/mozilla/web-extension-manifest-schema/issues"
   },
-  "main": "dist/validator",
   "homepage": "https://github.com/mozilla/web-extension-manifest-schema#readme",
   "dependencies": {
-    "ajv": "3.5.1"
+    "ajv": "3.5.2"
   },
   "devDependencies": {
     "babel-core": "6.4.5",
