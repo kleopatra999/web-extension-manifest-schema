@@ -1,6 +1,6 @@
 {
   "name": "mozilla-web-extension-manifest-schema",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JSON schema for the manifest.json for Mozilla Web Extensions. ",
   "main": "index.js",
   "directories": {
