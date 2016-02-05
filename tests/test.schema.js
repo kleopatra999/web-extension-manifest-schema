@@ -1,6 +1,6 @@
 import { schema } from '../validator';
 
-describe('Schema', () => {
+describe('Schema JSON', () => {
 
   it('should be valid JSON', () => {
     try {
