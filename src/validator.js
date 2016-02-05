@@ -6,7 +6,9 @@ import { isValidVersionString } from './formats';
 export var schema = fs.readFileSync(
   path.join(__dirname, 'manifest-schema.json'), 'utf8');
 
-var validator = ajv({allErrors: true});
+export var schemaObject = JSON.parse(schema);
+
+var validator = ajv({allErrors: true, verbose: true, jsonPointers: true});
 validator.addFormat('versionString', isValidVersionString);
 
-export default validator.compile(JSON.parse(schema));
+export default validator.compile(schemaObject);
