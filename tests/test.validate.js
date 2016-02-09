@@ -30,7 +30,7 @@ describe('Schema Validation', () => {
       version: undefined,
     }));
     assert.equal(validate.errors.length, 1);
-    assert.equal(validate.errors[0].dataPath, '');
+    assert.equal(validate.errors[0].dataPath, '/version');
     assert.equal(validate.errors[0].params.missingProperty, 'version');
   });
 

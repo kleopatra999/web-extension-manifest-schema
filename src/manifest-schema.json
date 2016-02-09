@@ -45,13 +45,12 @@
         },
         "manifest_version": {
             "description": "This key specifies the version of manifest.json used by this extension. Currently, this must always be 2.",
-            "enum": [2],
+            "minimum": 2,
+            "maximum": 2,
             "type": "integer"
         },
         "version": {
-            "$ref": "#/definitions/version",
-            "description": "Version of the extension, formatted as numbers and ASCII characters separated by dots. For the details of the version format, see https://developer.mozilla.org/docs/Toolkit_version_format",
-            "type": "string"
+            "$ref": "#/definitions/versionString"
         }
     },
     "required": [
@@ -61,9 +60,10 @@
         "version"
     ],
     "definitions": {
-        "version": {
+        "versionString": {
             "format": "versionString",
-            "type": "string"
+            "type": "string",
+            "description": "Version string must be a string comprising one to four dot-separated integers betwe (0-65535). E.g: 1.2.3."
         }
     }
 }
