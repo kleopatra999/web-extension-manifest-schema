@@ -8,7 +8,12 @@ export var schema = fs.readFileSync(
 
 export var schemaObject = JSON.parse(schema);
 
-var validator = ajv({allErrors: true, verbose: true, jsonPointers: true});
+var validator = ajv({
+  allErrors: true,
+  errorDataPath: 'property',
+  jsonPointers: true,
+  verbose: true,
+});
 validator.addFormat('versionString', isValidVersionString);
 
 export default validator.compile(schemaObject);
