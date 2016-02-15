@@ -1,4 +1,6 @@
-import { schema } from '../validator';
+import validate, { schema } from '../validator';
+import { validManifest } from './helpers';
+
 
 describe('Schema JSON', () => {
 
@@ -12,6 +14,11 @@ describe('Schema JSON', () => {
         throw e;
       }
     }
+  });
+
+  it('should be valid against the reference schema', () => {
+    var isValid = validate(validManifest);
+    assert.ok(isValid);
   });
 
 });
