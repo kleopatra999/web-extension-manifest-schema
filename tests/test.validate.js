@@ -34,4 +34,12 @@ describe('Schema Validation', () => {
     assert.equal(validate.errors[0].params.missingProperty, 'version');
   });
 
+  it('should be invalid due to invalid url', () => {
+    var manifest = Object.assign({}, validManifest);
+    manifest.applications.gecko.update_url = 'whatevs';
+    validate(manifest);
+    assert.equal(validate.errors.length, 1);
+    assert.equal(validate.errors[0].dataPath, '/applications/gecko/update_url');
+  });
+
 });
