@@ -5,37 +5,39 @@
     "properties": {
         "applications": {
             "type": "object",
-                "properties": {
-                    "gecko": {
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "description": "id is the extension ID. Mandatory. See https://developer.mozilla.org/Add-ons/Install_Manifests#id",
-                                "pattern": "^{[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}}$|^[A-Za-z0-9-._]+\\@[A-Za-z0-9-._]+$",
-                                "type": "string"
-                            },
-                            "strict_min_version": {
-                                "default": "42a1",
-                                "description": "Minimum version of Gecko to support. Defaults to '42a1'. (Requires Gecko 45)",
-                                "type": "string"
-                            },
-                            "strict_max_version": {
-                                "default": "*",
-                                "description": "Maxiumum version of Gecko to support. Defaults to '*'. (Requires Gecko 45)",
-                                "type": "string"
-                            },
-                            "update_url": {
-                                "description": "Link to an add-on update manifest. (Requires Gecko 45)",
-                                "type": "string",
-                                "format": "uri"
-                            }
+            "properties": {
+                "gecko": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "description": "id is the extension ID. Mandatory. See https://developer.mozilla.org/Add-ons/Install_Manifests#id",
+                            "pattern": "^{[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}}$|^[A-Za-z0-9-._]+\\@[A-Za-z0-9-._]+$",
+                            "type": "string"
                         },
-                        "required": [
-                            "id"
-                        ]
-                    }
+                        "strict_min_version": {
+                            "default": "42a1",
+                            "description": "Minimum version of Gecko to support. Defaults to '42a1'. (Requires Gecko 45)",
+                            "type": "string"
+                        },
+                        "strict_max_version": {
+                            "default": "*",
+                            "description": "Maxiumum version of Gecko to support. Defaults to '*'. (Requires Gecko 45)",
+                            "type": "string"
+                        },
+                        "update_url": {
+                            "description": "Link to an add-on update manifest. (Requires Gecko 45)",
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    },
+                    "required": [
+                        "id"
+                    ]
                 }
-
+            },
+            "required": [
+                "gecko"
+            ]
         },
         "name": {
             "description": "Name of the extension. This is used to identify the extension in the browser's user interface and on sites  like addons.mozilla.org.",
