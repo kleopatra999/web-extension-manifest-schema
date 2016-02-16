@@ -41,7 +41,7 @@
             "description": "Name of the extension. This is used to identify the extension in the browser's user interface and on sites  like addons.mozilla.org.",
             "type": "string",
             "minLength": 2,
-            "maxLength": 255
+            "maxLength": 45
         },
         "manifest_version": {
             "description": "This key specifies the version of manifest.json used by this extension. Currently, this must always be 2.",
