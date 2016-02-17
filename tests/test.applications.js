@@ -5,6 +5,15 @@ import cloneDeep from 'lodash.clonedeep';
 
 describe('/applications/gecko/*', () => {
 
+  it('should require a gecko object', () => {
+    var manifest = cloneDeep(validManifest);
+    manifest.applications.gecko = undefined;
+    validate(manifest);
+    assert.equal(validate.errors.length, 1);
+    assert.equal(validate.errors[0].dataPath, '/applications/gecko');
+    assert.equal(validate.errors[0].params.missingProperty, 'gecko');
+  });
+
   it('should be invalid due to invalid update_url', () => {
     var manifest = cloneDeep(validManifest);
     manifest.applications.gecko.update_url = 'whatevs';
