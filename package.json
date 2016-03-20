@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/mozilla/web-extension-manifest-schema#readme",
   "dependencies": {
-    "ajv": "3.8.4"
+    "ajv": "3.8.6"
   },
   "devDependencies": {
     "babel-core": "6.7.2",
