@@ -10,7 +10,7 @@
                     "type": "object",
                     "properties": {
                         "id": {
-                            "description": "id is the extension ID. Mandatory. See https://developer.mozilla.org/Add-ons/Install_Manifests#id",
+                            "description": "id is the extension ID. Optional. See https://developer.mozilla.org/Add-ons/Install_Manifests#id",
                             "pattern": "^{[A-Fa-f0-9]{8}-([A-Fa-f0-9]{4}-){3}[A-Fa-f0-9]{12}}$|^[A-Za-z0-9-._]+\\@[A-Za-z0-9-._]+$",
                             "type": "string"
                         },
@@ -29,10 +29,7 @@
                             "type": "string",
                             "format": "uri"
                         }
-                    },
-                    "required": [
-                        "id"
-                    ]
+                    }
                 }
             },
             "required": [

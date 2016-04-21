@@ -61,13 +61,11 @@ describe('/applications/gecko/*', () => {
       '/applications/gecko/id');
   });
 
-  it('should be invalid due to missing required id', () => {
+  it('should accept an add-on without an id', () => {
     var manifest = cloneDeep(validManifest);
     manifest.applications.gecko.id = undefined;
     validate(manifest);
-    assert.equal(validate.errors.length, 1);
-    assert.equal(validate.errors[0].dataPath, '/applications/gecko/id');
-    assert.equal(validate.errors[0].params.missingProperty, 'id');
+    assert.isNull(validate.errors);
   });
 
 });
