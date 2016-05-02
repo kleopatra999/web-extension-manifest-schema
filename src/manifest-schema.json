@@ -31,10 +31,7 @@
                         }
                     }
                 }
-            },
-            "required": [
-                "gecko"
-            ]
+            }
         },
         "name": {
             "description": "Name of the extension. This is used to identify the extension in the browser's user interface and on sites  like addons.mozilla.org.",
@@ -53,7 +50,6 @@
         }
     },
     "required": [
-        "applications",
         "name",
         "manifest_version",
         "version"
