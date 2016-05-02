@@ -21,7 +21,7 @@
                         },
                         "strict_max_version": {
                             "default": "*",
-                            "description": "Maxiumum version of Gecko to support. Defaults to '*'. (Requires Gecko 45)",
+                            "description": "Maximum version of Gecko to support. Defaults to '*'. (Requires Gecko 45)",
                             "type": "string"
                         },
                         "update_url": {
@@ -31,10 +31,7 @@
                         }
                     }
                 }
-            },
-            "required": [
-                "gecko"
-            ]
+            }
         },
         "name": {
             "description": "Name of the extension. This is used to identify the extension in the browser's user interface and on sites  like addons.mozilla.org.",
@@ -53,7 +50,6 @@
         }
     },
     "required": [
-        "applications",
         "name",
         "manifest_version",
         "version"

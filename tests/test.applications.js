@@ -3,15 +3,22 @@ import { validManifest } from './helpers';
 import cloneDeep from 'lodash.clonedeep';
 
 
+describe('/applications/*', () => {
+  it('should not require an application object', () => {
+    var manifest = cloneDeep(validManifest);
+    manifest.applications = undefined;
+    validate(manifest);
+    assert.isNull(validate.errors);
+  });
+});
+
 describe('/applications/gecko/*', () => {
 
-  it('should require a gecko object', () => {
+  it('should not require a gecko object', () => {
     var manifest = cloneDeep(validManifest);
     manifest.applications.gecko = undefined;
     validate(manifest);
-    assert.equal(validate.errors.length, 1);
-    assert.equal(validate.errors[0].dataPath, '/applications/gecko');
-    assert.equal(validate.errors[0].params.missingProperty, 'gecko');
+    assert.isNull(validate.errors);
   });
 
   it('should be invalid due to invalid update_url', () => {
