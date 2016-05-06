@@ -85,6 +85,13 @@
                     }
                 ]
             }
+        },
+        "web_accessible_resources": {
+            "description": "Resources accessible to the extension",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "required": [
