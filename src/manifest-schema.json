@@ -47,6 +47,44 @@
         },
         "version": {
             "$ref": "#/definitions/versionString"
+        },
+        "permissions": {
+            "description": "Permissions allowed for the extension",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "string",
+                        "enum": [
+                            "activeTab",
+                            "alarms",
+                            "bookmarks",
+                            "contextMenus",
+                            "cookies",
+                            "downloads",
+                            "downloads.open",
+                            "downloads.shelf",
+                            "idle",
+                            "notifications",
+                            "storage",
+                            "tabs",
+                            "webNavigation",
+                            "webRequest",
+                            "webRequestBlocking",
+                            "<all_urls>"
+                        ]
+                    },
+                    {
+                        "type": "string",
+                        "pattern": "^(https?|file|ftp|app|\\*)://(\\*|\\*\\.[^*/]+|[^*/]+)/.*$"
+                    },
+                    {
+                        "type": "string",
+                        "pattern": "^file:///.*$"
+                    }
+                ]
+            }
         }
     },
     "required": [
