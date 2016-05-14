@@ -1,4 +1,4 @@
-import { isValidVersionString } from '../formats';
+import { isRelativeURL, isValidVersionString } from '../formats';
 
 describe('formats.isValidVersionString', () => {
 
@@ -35,4 +35,26 @@ describe('formats.isValidVersionString', () => {
       assert.notOk(isValidVersionString(invalidVersionString));
     });
   }
+});
+
+describe('formats.isRelativeURL', () => {
+
+  const notRelativeURLs = [
+    'http://foo',
+    'Https://foo.com/bar',
+    'moz-extension://wat',
+    '//foo',
+    '/foo',
+  ];
+
+  for (const notRelativeURL of notRelativeURLs) {
+    it(`${notRelativeURL} should be invalid`, () => {
+      assert.notOk(isRelativeURL(notRelativeURL));
+    });
+  }
+
+  it('should be valid', () => {
+    assert.isOk(isRelativeURL('something.png'));
+  });
+
 });
