@@ -1,4 +1,5 @@
 const VALIDNUMRX = /^[0-9]{1,5}$/;
+const RELATIVE_URL_REGEX = /^(?!(.+|)\/)/;
 
 
 export function isValidVersionString(version) {
@@ -25,4 +26,8 @@ export function isValidVersionString(version) {
     }
   }
   return true;
+}
+
+export function isRelativeURL(url) {
+  return Boolean(url.match(RELATIVE_URL_REGEX));
 }
