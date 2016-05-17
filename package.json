@@ -44,7 +44,7 @@
     "grunt-eslint": "18.1.0",
     "grunt-mocha-test": "0.12.7",
     "grunt-newer": "1.2.0",
-    "load-grunt-configs": "0.4.3",
+    "load-grunt-configs": "1.0.0",
     "load-grunt-tasks": "3.5.0",
     "lodash.clonedeep": "4.3.2",
     "mocha": "2.4.5"
