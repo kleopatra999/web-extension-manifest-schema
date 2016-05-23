@@ -47,6 +47,6 @@
     "load-grunt-configs": "1.0.0",
     "load-grunt-tasks": "3.5.0",
     "lodash.clonedeep": "4.3.2",
-    "mocha": "2.4.5"
+    "mocha": "2.5.1"
   }
 }
