@@ -55,6 +55,7 @@ describe('formats.isRelativeURL', () => {
 
   it('should be valid', () => {
     assert.isOk(isRelativeURL('something.png'));
+    assert.isOk(isRelativeURL('js/jquery.js'));
   });
 
 });
