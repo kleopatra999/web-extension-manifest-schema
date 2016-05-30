@@ -67,6 +67,9 @@
                 "page": {
                     "type": "string",
                     "format": "relativeURL"
+                },
+                "persistent": {
+                    "type": "boolean"
                 }
             },
             "additionalProperties": false

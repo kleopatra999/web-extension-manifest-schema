@@ -40,14 +40,11 @@ describe('/background', () => {
     assert.isNull(validate.errors);
   });
 
-  it('persistent not expected', () => {
+  it('supports persistent', () => {
     var manifest = cloneDeep(validManifest);
     manifest.background = {persistent: true};
     validate(manifest);
-    assert.equal(validate.errors.length, 1);
-    assert.equal(validate.errors[0].dataPath, '/background/persistent');
-    assert.equal(validate.errors[0].message,
-                 'should NOT have additional properties');
+    assert.isNull(validate.errors);
   });
 
 });
