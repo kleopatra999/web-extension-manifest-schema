@@ -18,6 +18,13 @@ describe('/background', () => {
 
   it('script relative URL should be valid', () => {
     var manifest = cloneDeep(validManifest);
+    manifest.background = {scripts: ['js/jquery.js']};
+    validate(manifest);
+    assert.isNull(validate.errors);
+  });
+
+  it('script relative URL with path should be valid', () => {
+    var manifest = cloneDeep(validManifest);
     manifest.background = {scripts: ['foo.png']};
     validate(manifest);
     assert.isNull(validate.errors);
