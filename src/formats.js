@@ -32,7 +32,7 @@ export function isValidVersionString(version) {
 export function isRelativeURL(url) {
   let parsed = parse(url);
 
-  if (parsed.protocol !== '' || parsed.href.startsWith('/')) {
+  if (parsed.protocol !== '' || parsed.href.startsWith('//')) {
     return false;
   }
 

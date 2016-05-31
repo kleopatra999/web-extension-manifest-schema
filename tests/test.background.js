@@ -16,9 +16,10 @@ describe('/background', () => {
                  'should match format "relativeURL"');
   });
 
+
   it('script relative URL should be valid', () => {
     var manifest = cloneDeep(validManifest);
-    manifest.background = {scripts: ['js/jquery.js']};
+    manifest.background = {scripts: ['js/jquery.js', '/js/jquery.js']};
     validate(manifest);
     assert.isNull(validate.errors);
   });
