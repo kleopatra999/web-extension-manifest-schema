@@ -127,6 +127,11 @@
             "items": {
                 "type": "string"
             }
+        },
+        "incognito": {
+            "description": "The behaviour in incognito or private browsing mode",
+            "type": "string",
+            "pattern": "^spanning$"
         }
     },
     "required": [
